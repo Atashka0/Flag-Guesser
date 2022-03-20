@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mw4-qu-yhf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6X0-vv-egL">
+                                <rect key="frame" x="107" y="168" width="200" height="100"/>
+                                <state key="normal" image="Estonia"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nmb-ow-X9W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzB-2N-bQP">
+                                <rect key="frame" x="107" y="490" width="200" height="100"/>
+                                <state key="normal" image="Estonia"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gOU-Ta-eWW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jvu-vO-L7S">
+                                <rect key="frame" x="107" y="330" width="200" height="100"/>
+                                <state key="normal" image="Estonia"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rf4-ZF-tpH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6X0-vv-egL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="1wY-M3-bvc"/>
+                            <constraint firstItem="Jvu-vO-L7S" firstAttribute="centerX" secondItem="6X0-vv-egL" secondAttribute="centerX" id="30Y-ik-tdn"/>
+                            <constraint firstItem="uzB-2N-bQP" firstAttribute="top" secondItem="Jvu-vO-L7S" secondAttribute="bottom" constant="60" id="39M-dH-kcM"/>
+                            <constraint firstItem="6X0-vv-egL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bZV-49-3p6"/>
+                            <constraint firstItem="uzB-2N-bQP" firstAttribute="centerX" secondItem="Jvu-vO-L7S" secondAttribute="centerX" id="nvV-AH-atg"/>
+                            <constraint firstItem="Jvu-vO-L7S" firstAttribute="top" secondItem="6X0-vv-egL" secondAttribute="bottom" constant="62" id="o4v-nE-bKd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1oS-Mf-LS3"/>
+                    <connections>
+                        <outlet property="button1" destination="6X0-vv-egL" id="wuY-3X-enn"/>
+                        <outlet property="button2" destination="Jvu-vO-L7S" id="lef-lG-ww1"/>
+                        <outlet property="button3" destination="uzB-2N-bQP" id="Neo-Ni-0nE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="93.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7DT-pS-Npd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mw4-qu-yhf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dnT-gm-DRE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lHl-mL-a8e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="idJ-6J-Z8r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Estonia" width="200" height="100"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
